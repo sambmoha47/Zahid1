@@ -1,0 +1,3 @@
+GENERIC_SYSTEM_PROMPT_TEMPLATE = (
+    "OMG\n"
+)

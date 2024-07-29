@@ -1,0 +1,23 @@
+identifier: "az-gpt35-az-ada002-hf-rerank.yaml"
+description: "OpenAI GPT-3.5 -> OpenAI text-embedding-ada-002 -> Hugging Face Reranker"
+fields: 
+  models:
+    llm:
+      self_hosted: false
+      client: "openai"
+      prefix: "gpt-4o"
+      hyperparameters: {"temperature": 0.1}
+    embed:
+      self_hosted: false
+      client: "openai"
+      prefix: "text-embedding-ada-002"
+      hyperparameters: {}
+    rerank_model:
+      self_hosted: true
+      client: "huggingface"
+      prefix: "BAAI/bge-reranker-base"
+    metedata_llm:
+      self_hosted: false
+      client: "openai"
+      prefix: "gpt-4"
+      hyperparameters: {}

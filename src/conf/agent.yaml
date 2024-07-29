@@ -1,0 +1,14 @@
+identifier: "ragent-retrieval"
+description: "General retrieval agent for RAG-based models"
+fields:
+  index:
+    path: "data/vector"
+    type: "multiple"  # 'single' for one index or 'multiple' for folder-specific indexes
+    single_index_name: "global-index"  # Used if type is 'single'
+    folder_indexes:                    # Used if type is 'multiple'
+      - folder: "zahid"
+        index_name: "zahid-index"
+    load_existing_index_under_prefix: true
+  protocol:
+    client: "grok-llama70B-vx-gecko-hf-rerank.yaml"
+    parser: "base.yaml"

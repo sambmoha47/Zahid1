@@ -1,0 +1,22 @@
+identifier: "ragent-retrieval"
+description: "General retrieval agent for RAG-based models"
+fields:
+  source:
+    path: "data/source"
+    folders:
+      - name: "mostostal"
+  eval:
+    path: "data/eval"
+    folders: 
+      - name: "mostostal_questions"
+  index:
+    path: "data/vector"
+    load_existing_index_under_prefix: true
+    multi_index: 
+      enable_multi_index_scattering: true
+      index_mapping:
+      - folder: "mostostal"
+        index_name: "mostostal_index"
+  protocol:
+    client: "vx-bison-vx-gecko-hf-rerank.yaml"
+    parser: "base.yaml"

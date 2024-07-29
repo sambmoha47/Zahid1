@@ -1,0 +1,23 @@
+identifier: "az-gpt35-hf-bgem3-hf-bgereranl.yaml"
+description: "Azure GPT-3.5 -> Hugging Face BGE-M3 -> Hugging Face Reranker"
+fields: 
+  models:
+    llm:
+      self_hosted: false
+      client: "azure"
+      prefix: "gpt-35-turbo"
+      hyperparameters: {"temperature": 0.3}
+    embed:
+      self_hosted: true
+      client: "huggingface"
+      prefix: "BAAI/bge-m3"
+      hyperparameters: {}
+    rerank_model:
+      self_hosted: true
+      client: "huggingface"
+      prefix: "BAAI/bge-reranker-base"
+    metedata_llm:
+      self_hosted: false
+      client: "azure"
+      prefix: "gpt-35-turbo"
+      hyperparameters: {}

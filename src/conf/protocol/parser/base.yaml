@@ -1,0 +1,23 @@
+identifier: "base"
+description: "Parser Settings"
+fields:
+  splitters:
+    sentence:
+      identifier: "SentenceSplitter"
+      chunks: 256
+      overlap: 64
+  extractors:
+    summary:
+      identifier: "SummaryExtractor"
+      summaries: ["prev", "self", "next"] 
+    questions: 
+      identifier: "QuestionExtractor"
+      questions: 4
+    title:
+      identifier: "TitleExtractor"
+      titles: 2
+    keywords:
+      identifier: "KeywordExtractor"
+      keywords: 9
+
+    

@@ -1,0 +1,32 @@
+identifier: "vx-bison-vx-gecko-hf-rerank.yaml"
+description: "Grok Llama70B -> Vertex Gecko -> Hugging Face Reranker"
+fields: 
+  models:
+    llm:
+      self_hosted: false
+      client: "claude"
+      prefix: ""
+      # client: "grok"
+      # prefix: "llama3-70b-8192"
+      # prefix: "mixtral-8x7b-32768"
+      # prefix: "gemma2-9b-it"
+      # client: "vertex"
+      # prefix: "gemini-1.5-pro"
+      hyperparameters: {}
+      # client: "openai"
+      # prefix: "gpt-4o"
+      # hyperparameters: {"temperature": 0.1}
+    embed:
+      self_hosted: false
+      client: "vertex"
+      prefix: "textembedding-gecko@003"
+      hyperparameters: {}
+    rerank_model:
+      self_hosted: true
+      client: "huggingface"
+      prefix: "BAAI/bge-reranker-base"
+    metadata_llm:
+      self_hosted: false
+      client: "vertex"
+      prefix: "text-bison"
+      hyperparameters: {}

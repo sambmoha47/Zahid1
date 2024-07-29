@@ -1,0 +1,23 @@
+identifier: "vx-bison-vx-gecko-hf-rerank.yaml"
+description: "Vertex Bison -> Vertex Gecko -> Hugging Face Reranker"
+fields: 
+  models:
+    llm:
+      self_hosted: false
+      client: "vertex"
+      prefix: "gemini-1.5-pro"
+      hyperparameters: {}
+    embed:
+      self_hosted: false
+      client: "vertex"
+      prefix: "textembedding-gecko@003"
+      hyperparameters: {}
+    rerank_model:
+      self_hosted: true
+      client: "huggingface"
+      prefix: "BAAI/bge-reranker-base"
+    metedata_llm:
+      self_hosted: false
+      client: "vertex"
+      prefix: "text-bison"
+      hyperparameters: {}

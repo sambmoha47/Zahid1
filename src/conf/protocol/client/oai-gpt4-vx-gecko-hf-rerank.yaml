@@ -1,0 +1,23 @@
+identifier: "vx-bison-vx-gecko-hf-rerank.yaml"
+description: "OpenAI GPT-4-turbo -> Vertex Gecko -> Hugging Face Reranker"
+fields: 
+  models:
+    llm:
+      self_hosted: false
+      client: "openai"
+      prefix: "gpt-4o"
+      hyperparameters: {}
+    embed:
+      self_hosted: false
+      client: "vertex"
+      prefix: "textembedding-gecko@003"
+      hyperparameters: {}
+    rerank_model:
+      self_hosted: true
+      client: "huggingface"
+      prefix: "BAAI/bge-reranker-base"
+    metadata_llm:
+      self_hosted: false
+      client: "vertex"
+      prefix: "text-bison"
+      hyperparameters: {}

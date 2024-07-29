@@ -1,0 +1,34 @@
+name: rag
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - chainlit==1.0.501
+      - python-dotenv==1.0.1
+      - langchain==0.1.16
+      - llama-index==0.10.28
+      - llama-index-embeddings-azure-openai==0.1.9
+      - llama-index-llms-azure-openai==0.1.6
+      - llama-index-embeddings-huggingface==0.2.0
+      - llama-index-embeddings-instructor==0.1.3
+      - llama-index-graph-stores-neo4j==0.1.4
+      - llama-index-llms-huggingface==0.1.4
+      - llama-index-llms-openai==0.1.19
+      - llama-index-llms-vertex==0.1.5
+      - llama-index-embeddings-vertex==0.1.0
+      - torch==2.3.0
+      - transformers==4.40.1
+      - sentence-transformers==2.7.0
+      - pymupdf==1.24.2
+      - google-cloud-storage==2.16.0
+      - loguru==0.7.2
+      - watchdog==4.0.0
+      - click==8.1.7
+      - llama-parse==0.4.2
+      - trulens-eval==0.28.2
+      - pinecone-client==3.2.2
+      - llama-index-llms-gemini==0.1.7
+      - llama-index-vector-stores-pinecone==0.1.7

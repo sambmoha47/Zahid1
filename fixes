@@ -1,0 +1,7 @@
+Use markdown in llama parse
+llm2 is not llama3 its text bison of gcp
+Poor VectorDB entries {SentenceSplitter(chunk_size=1500, chunk_overlap=300),
+                        QuestionsAnsweredExtractor(questions=9, llm=llm),
+                        TitleExtractor(nodes=4, llm=llm),
+                        SummaryExtractor(summaries=["prev", "self", "next"], llm=llm),
+                        KeywordExtractor(keywords=9, llm=llm)}
